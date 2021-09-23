@@ -25,3 +25,9 @@ elif (a == "Windows"):
 
     shell3 = subprocess.run(["dir", "C:\Users\*.exe", "/s", "/b", "|", "find", "/v", "/i", "|", "findstr", "/e", ".exe"])
     print(shell3)
+
+elif (a == "Linux"):
+
+    os.chdir(r"/usr/lib")
+    shell = subprocess.run(["dir", "/usr/lib/*.bin"])
+    print (shell)
