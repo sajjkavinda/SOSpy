@@ -15,7 +15,7 @@ if (a == "Darwin"):
 
     f1 = open(r'/Users/sajjkavinda/entries_mac1.log', 'w')
     os.chdir("/Users/sajjkavinda/Downloads")
-    print (os.listdir())
+    #print (os.listdir())
 
     
 
