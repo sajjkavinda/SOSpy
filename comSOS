@@ -7,18 +7,21 @@ a = platform.system()
 #b = os.system('ls /Users/sajjkavinda')
 
 if (a == "Darwin"):
-    x = datetime.datetime.now()
-    timeL  = x.strftime("%a %b %m %H:%M:%S")
-    timezone = time.timezone
-    year = x.strftime("%Y \n")
-    print(timeL , " ", timezone , " " , year , "\n")
 
-    f1 = open(r'/Users/sajjkavinda/entries_mac1.log', 'w')
     os.chdir("/Users/sajjkavinda/Downloads")
     #print (os.listdir())
 
-    
+    shell = subprocess.run(["ls" , "-l"])
+    print (shell)
 
-    proc = subprocess.run(["dir" , "/s ", "/b",  "*.exe",  "|",  "findstr",  "/v .exe."])
-    proc2 = subprocess.run(["ls", "-l"])
-    print (proc)
+elif (a == "Windows"):
+    
+    os.chdir(r"C:\\Windows\system32")
+    shell = subprocess.run(["dir" , "/s ", "/b",  "*.exe",  "|",  "findstr",  "/v", ".exe"])
+    print(shell)
+
+    shell2 = subprocess.run(["dir", "-c",  "--file-type", "*.exe"])
+    print(shell2)
+
+    shell3 = subprocess.run(["dir", "C:\Users\*.exe", "/s", "/b", "|", "find", "/v", "/i", "|", "findstr", "/e", ".exe"])
+    print(shell3)
