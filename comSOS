@@ -26,16 +26,6 @@ elif (a == "Windows"):
 
     os.chdir(r"C:\\Windows\system32")
 
-
-    #f1 = open(r'C:\Users\Sajana\Desktop\entries_win.log', "w")
-    #shell = subprocess.run(["dir", "r"C:\Windows\system32\*.exe""])
-    #print(shell)
-
-    #shell2 = subprocess.run(["dir", "-c",  "--file-type", "*.exe"])
-    #print(shell2)
-
-    #shell3 = subprocess.run(["dir", "C:\Users\*.exe", "/s", "/b", "|", "find", "/v", "/i", "|", "findstr", "/e", ".exe"])
-    #print(shell3)
     #n = os.system('cmd /k "dir C:\Windows\system32\*.exe"')
     
     #print(n)
@@ -43,8 +33,8 @@ elif (a == "Windows"):
     #f1.write(os.system('cmd /k "dir C:\Windows\system32\*.exe"'))
 
     #with open (r'C:\Users\Sajana\Desktop\entries_win.log', "w") as f:
-     #   with contextlib.redirect_stdout(f):
-       #     os.system('cmd /k "dir C:\Windows\system32\*.exe"')
+    #  with contextlib.redirect_stdout(f):
+    #     os.system('cmd /k "dir C:\Windows\system32\*.exe"')
 
     det = os.popen('dir C:\Windows\system32\*.exe')
     
