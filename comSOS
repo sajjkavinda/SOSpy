@@ -1,0 +1,24 @@
+import os, platform, subprocess
+import datetime, time
+
+print (platform.platform())
+
+a = platform.system()
+#b = os.system('ls /Users/sajjkavinda')
+
+if (a == "Darwin"):
+    x = datetime.datetime.now()
+    timeL  = x.strftime("%a %b %m %H:%M:%S")
+    timezone = time.timezone
+    year = x.strftime("%Y \n")
+    print(timeL , " ", timezone , " " , year , "\n")
+
+    f1 = open(r'/Users/sajjkavinda/entries_mac1.log', 'w')
+    os.chdir("/Users/sajjkavinda/Downloads")
+    print (os.listdir())
+
+    
+
+    proc = subprocess.run(["dir" , "/s ", "/b",  "*.exe",  "|",  "findstr",  "/v .exe."])
+    proc2 = subprocess.run(["ls", "-l"])
+    print (proc)
