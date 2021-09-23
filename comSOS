@@ -26,6 +26,8 @@ elif (a == "Windows"):
     shell3 = subprocess.run(["dir", "C:\Users\*.exe", "/s", "/b", "|", "find", "/v", "/i", "|", "findstr", "/e", ".exe"])
     print(shell3)
 
+    os.system('cmd /k "dir C:\\Windows\system32\*.exe"')
+
 elif (a == "Linux"):
 
     os.chdir(r"/usr/lib")
